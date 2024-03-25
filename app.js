@@ -62,4 +62,4 @@ fetch(apiUrl)
     console.error('Error:', error);
   });
 
-  alert("Hello World");
+  
