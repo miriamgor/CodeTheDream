@@ -1,37 +1,27 @@
-1. Project's Title
-This is the name of the project. It describes the whole project in one sentence, and helps people understand what the main goal and aim of the project is.
+1. Random Cat Pictures
 
-2. Project Description
-This is an important component of your project that many new developers often overlook.
+Hello! Thank you for looking at this application. As the title states, this is an app that will show you random pictures of cats, because cats are life!
 
-Your description is an extremely important aspect of your project. A well-crafted description allows you to show off your work to other developers as well as potential employers.
+2. Link to project: https://github.com/miriamgor/CodeTheDream
 
-The quality of a README description often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase:
+3. Tech used: HTML, CSS, JavaScript
 
-What your application does,
-Why you used the technologies you used,
-Some of the challenges you faced and features you hope to implement in the future.
-3. Table of Contents (Optional)
-If your README is very long, you might want to add a table of contents to make it easy for users to navigate to different sections easily. It will make it easier for readers to move around the project with ease.
+These technologies were used in order to better learn how to use them, and show knowledge in this area before a React JS course.
 
-4. How to Install and Run the Project
-If you are working on a project that a user needs to install or run locally in a machine like a "POS", you should include the steps required to install your project and also the required dependencies if any.
+This application also used theCatApi.com to obtain pictures of cats.
 
-Provide a step-by-step description of how to get the development environment set and running.
+To run application simply download the code to your machine and open using your editor of choice. 
 
-5. How to Use the Project
-Provide instructions and examples so users/contributors can use the project. This will make it easy for them in case they encounter a problem – they will always have a place to reference what is expected.
+4. Table of Contents
+•	app.js
+•	index.html
+•	app.css
 
-You can also make use of visual aids by including materials like screenshots to show examples of the running project and also the structure and design principles used in your project.
+5. Lessons Learned:
+•	Fetching data from an API using a ‘try…catch’ block
+•	Navigating through different API models 
+•	Displaying data from an API onto a page
 
-Also if your project will require authentication like passwords or usernames, this is a good section to include the credentials.
+This was an awesome opportunity to practice with JavaScript, HTML and CSS. The research was extensive to try to find the right API model. I acquired experience working with APIs and displaying fetched data onto a page. 
 
-6. Include Credits
-If you worked on the project as a team or an organization, list your collaborators/team members. You should also include links to their GitHub profiles and social media too.
-
-Also, if you followed tutorials or referenced a certain material that might help the user to build that particular project, include links to those here as well.
-
-This is just a way to show your appreciation and also to help others get a first hand copy of the project.
-
-7. Add a License
-For most README files, this is usually considered the last part. It lets other developers know what they can and cannot do with your project.
+I hope this tiny project shows you how I went about making an API call. 
