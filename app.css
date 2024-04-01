@@ -19,7 +19,7 @@ h3 {
   text-align: center;
 }
 
-.btn {
+.btn, .btn2, .btn3 {
   background: transparent;
   border-radius: 10px;
   background-color: white;
