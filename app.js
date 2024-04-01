@@ -1,65 +1,31 @@
-// Define the API URL
-const apiUrl = 'https://api.artic.edu/api/v1/artworks/search?q=cats';
+const url = "https://api.thecatapi.com/v1/images/search";
+const section = document.querySelector(".container");
+const button = document.querySelector(".btn");
+console.log("button", button);
+console.log("section", section);
 
-// Make a GET request
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+button.addEventListener("click", getRandomCats);
 
+randomCatPhoto = (json) => {
+  let photo = json[0].url;
+  section.classList.add("cats");
 
+  let image = document.createElement("img");
+  image.src = photo;
+  image.classList.add("random_cats");
+  image.alt = photo;
+  section.appendChild(image);
+};
 
-//   const apiUrl = 'https://api.artic.edu/api/v1/artworks';
-// const outputElement = document.getElementById('output');
-
-// fetch(apiUrl)
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error('Network response was not ok');
-//     }
-//     return response.json();
-//   })
-//   .then(data => {
-//     // Display data in an HTML element
-//     outputElement.textContent = JSON.stringify(data, null, 2);
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
-
-
-
-
-// const apiKey = 'your_openweathermap_api_key';
-// const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}`;
-
-// const outputElement = document.getElementById('weather-output');
-
-// fetch(apiUrl)
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error('Network response was not ok');
-//     }
-//     return response.json();
-//   })
-//   .then(data => {
-//     const temperature = data.main.temp;
-//     const description = data.weather[0].description;
-//     const location = data.name;
-//     outputElement.innerHTML = `<p>Temperature in ${location}: ${temperature}°C</p>
-//                                <p>Weather: ${description}</p>`;
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
-
-  
+async function getRandomCats() {
+  section.innerHTML = "";
+  try {
+    const response = await fetch(url);
+    const json = await response.json();
+    console.log("JSON:", json);
+    return randomCatPhoto(json);
+  } catch (e) {
+    console.log("This is an error");
+    console.log(e);
+  }
+}
